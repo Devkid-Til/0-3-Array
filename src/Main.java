@@ -19,8 +19,15 @@ public class Main {
         arr.set(1, 10);
         System.out.println(arr);
 
-        arr.delete(2);
+        System.out.println(arr.remove(2));
         System.out.println(arr);
+
+        System.out.println(arr.removeFirst());
+        System.out.println(arr);
+
+        System.out.println(arr.removeLast());
+        System.out.println(arr);
+
     }
 
 }
