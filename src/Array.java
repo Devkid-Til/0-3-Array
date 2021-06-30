@@ -71,6 +71,30 @@ public class Array {
     }
 
     /**
+     * 获取index索引位置的元素
+     * @param index
+     * @return
+     */
+    public int get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Get Failed. Index is illegal.");
+        }
+        return data[index];
+    }
+
+    /**
+     * 修改index索引位置元素为e
+     * @param index
+     * @param e
+     */
+    public void set(int index, int e) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Get Failed. Index is illegal.");
+        }
+        data[index] = e;
+    }
+
+    /**
      * Array类的toString父类方法实现
      * @return
      */
