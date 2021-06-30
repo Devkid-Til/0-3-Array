@@ -114,7 +114,7 @@ public class Array {
      * 删除指定位置元素
      * @param index
      */
-    public void delete(int index) {
+    public void remove(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Get Failed. Index is illegal.");
         }
