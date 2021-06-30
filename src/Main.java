@@ -12,6 +12,15 @@ public class Main {
         arr.addFirst(-1);
         System.out.println(arr.toString());
 
+        System.out.println(arr.contains(1000));
+        System.out.println(arr.contains(1));
+        System.out.println(arr.find(1));
+
+        arr.set(1, 10);
+        System.out.println(arr);
+
+        arr.delete(2);
+        System.out.println(arr);
     }
 
 }
