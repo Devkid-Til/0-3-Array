@@ -5,6 +5,13 @@ public class Main {
             arr.addLast(i);
         }
         System.out.println(arr.toString());
+
+        arr.add(1,100);
+        System.out.println(arr.toString());
+
+        arr.addFirst(-1);
+        System.out.println(arr.toString());
+
     }
 
 }
