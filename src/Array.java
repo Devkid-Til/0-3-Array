@@ -83,6 +83,48 @@ public class Array {
     }
 
     /**
+     * 判断Array中是否包含元素e
+     * @param e
+     * @return
+     */
+    public boolean contains(int e) {
+        for (int i = 0; i < size; i ++) {
+            if (data[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 查找Array中元素e所在的索引，如果不存在，则返回-1
+     * @param e
+     * @return
+     */
+    public int find(int e)  {
+        for (int i = 0; i < size; i ++) {
+            if (data[i] == e) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 删除指定位置元素
+     * @param index
+     */
+    public void delete(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Get Failed. Index is illegal.");
+        }
+        for(int i = index; i < size - 1; i ++) {
+            data[i] = data[i+1];
+        }
+        size --;
+    }
+
+    /**
      * 修改index索引位置元素为e
      * @param index
      * @param e
