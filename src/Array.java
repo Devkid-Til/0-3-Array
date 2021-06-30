@@ -111,19 +111,26 @@ public class Array {
     }
 
     /**
-     * 删除指定位置元素
+     * 删除index位置元素，返回删除的元素
      * @param index
      */
-    public void remove(int index) {
+    public int remove(int index) {
         if (index < 0 || index >= size) {
-            throw new IllegalArgumentException("Get Failed. Index is illegal.");
+            throw new IllegalArgumentException("Remove Failed. Index is illegal.");
         }
+        int res = data[index];
         for(int i = index; i < size - 1; i ++) {
             data[i] = data[i+1];
         }
         size --;
+        return res;
     }
-
+    public int removeFirst() {
+        return remove(0);
+    }
+    public int removeLast() {
+        return remove(size - 1);
+    }
     /**
      * 修改index索引位置元素为e
      * @param index
