@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) throws IllegalAccessException {
-        Array<Integer> arr = new Array<>(20);
+        Array<Integer> arr = new Array<>(10);
         for (int i = 0; i < 10; i++) {
             arr.addLast(i);
         }
@@ -29,5 +29,7 @@ public class Main {
         System.out.println(arr);
 
     }
+
+
 
 }
