@@ -125,11 +125,33 @@ public class Array {
         size --;
         return res;
     }
+
+    /**
+     * 删除数组中第一个元素
+     * @return
+     */
     public int removeFirst() {
         return remove(0);
     }
+
+    /**
+     * 删除数组中最后一个元素
+     * @return
+     */
     public int removeLast() {
         return remove(size - 1);
+    }
+
+    /**
+     * 从数组中删除元素e
+     * @param e
+     */
+    public void  removeElement(int e) {
+        int index = find(e);
+        if (index != -1) {
+            remove(e);
+        }
+
     }
     /**
      * 修改index索引位置元素为e
