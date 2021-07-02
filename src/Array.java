@@ -61,11 +61,11 @@ public class Array<E> {
      * 向数组中第index位置插入一个新元素
      */
     public void add(int index, E e) throws IllegalAccessException {
-        if (size == data.length) {
-            throw new IllegalAccessException("Add Failed. Array is full.");
-        }
         if (index < 0 || index > size) {
             throw new IllegalAccessException("Add Failed. Require index >= 0 and index <= size");
+        }
+        if (size == data.length) {
+            resize(2* data.length);
         }
         for (int i = size - 1; i >= index; i --) {
             data[i+1] = data[i];
@@ -128,6 +128,9 @@ public class Array<E> {
         }
         size --;
         data[size] = null;
+        if (size == data.length / 2) {
+            resize(data.length / 2);
+        }
         return res;
     }
 
@@ -191,6 +194,13 @@ public class Array<E> {
         return res.toString();
     }
 
+    private void resize(int newCapacity) {
+        E[] newData = (E[])new Object[newCapacity];
+        for (int i = 0; i< data.length;i++){
+            newData[i] = data[i];
+        }
+        data = newData;
+    }
 
 }
 
