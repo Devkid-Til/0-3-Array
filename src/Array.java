@@ -127,6 +127,7 @@ public class Array<E> {
             data[i] = data[i+1];
         }
         size --;
+        // TODO
         data[size] = null;
         if (size == data.length / 4 && data.length / 2 != 0)  {
             resize(data.length / 2);
